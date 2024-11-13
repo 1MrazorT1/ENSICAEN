@@ -1,0 +1,1 @@
+https://www.olimex.com/Products/MSP430/Proto/MSP430-P169/

@@ -1,0 +1,770 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/debug/pjct.debug.obj
+intcodelo CODE 0 18 18 B6 1
+cinit CODE 0 1296 1296 2A 1
+text0 CODE 0 F44 F44 CA 1
+text1 CODE 0 12C0 12C0 2A 1
+text2 CODE 0 1350 1350 E 1
+text3 CODE 0 100E 100E A6 1
+text4 CODE 0 12EA 12EA 2A 1
+text5 CODE 0 135E 135E C 1
+text6 CODE 0 10B4 10B4 A2 1
+text7 CODE 0 1156 1156 82 1
+text8 CODE 0 1374 1374 6 1
+text9 CODE 0 137A 137A 4 1
+text10 CODE 0 137E 137E 4 1
+text11 CODE 0 1382 1382 4 1
+text12 CODE 0 136A 136A A 1
+text13 CODE 0 1268 1268 2E 1
+text15 CODE 0 11D8 11D8 4A 1
+text16 CODE 0 1222 1222 46 1
+cstackCOMRAM COMRAM 1 1 1 30 1
+cstackBANK0 BANK0 1 7B 7B 2 1
+temp COMRAM 1 48 48 1 1
+bssBANK0 BANK0 1 60 60 17 1
+smallconst SMALLCONST 0 F00 F00 44 1
+bssCOMRAM COMRAM 1 31 31 17 1
+$switch_init.obj
+text CODE 0 1314 1314 20 1
+bss_sw BANK0 1 7D 7D 1 1
+$delay_200ms.obj
+bss_delay BANK0 1 77 77 4 1
+text CODE 0 1334 1334 1C 1
+$/tmp/xcX6fZsaZ.obj
+idloc IDLOC 0 200000 200000 10 1
+init CODE 0 CE CE 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 C 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 7E-E87 1
+SFR E8D-FFF 1
+BANK0 7E-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-17 1
+CONST D2-EFF 1
+CONST 1386-1FFFF 1
+STACK 7E-E87 1
+SMALLCONST 1386-1FFFF 1
+CODE 4-17 1
+CODE D2-EFF 1
+CODE 1386-1FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-E87 1
+BIGRAM 49-5F 1
+BIGRAM 7E-E87 1
+COMRAM 49-5F 1
+EEDATA 310000-3103FF 1
+MEDIUMCONST 1386-FFFF 1
+MEDIUMCONST 10F00-1FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug/pjct.debug.obj
+18 intcodelo CODE >33:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+18 intcodelo CODE >8:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+6E intcodelo CODE >10:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+72 intcodelo CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+76 intcodelo CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+1222 text16 CODE >19:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1222 text16 CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1228 text16 CODE >29:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+122E text16 CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1242 text16 CODE >31:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1244 text16 CODE >32:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1246 text16 CODE >34:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+124C text16 CODE >35:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1250 text16 CODE >41:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1258 text16 CODE >42:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+125C text16 CODE >43:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1260 text16 CODE >45:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1262 text16 CODE >47:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+1266 text16 CODE >48:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_getc.c
+11D8 text15 CODE >19:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+11D8 text15 CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+11DE text15 CODE >29:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+11E6 text15 CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+11FA text15 CODE >31:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+11FC text15 CODE >32:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+11FE text15 CODE >34:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+1204 text15 CODE >35:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+1208 text15 CODE >41:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+1210 text15 CODE >42:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+1216 text15 CODE >43:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+121A text15 CODE >45:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+121C text15 CODE >47:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+1220 text15 CODE >48:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_getc.c
+1268 text13 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1268 text13 CODE >18:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+126C text13 CODE >19:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1272 text13 CODE >20:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1276 text13 CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+127A text13 CODE >22:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+127E text13 CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1282 text13 CODE >24:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1286 text13 CODE >25:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+128A text13 CODE >26:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+128E text13 CODE >29:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1290 text13 CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1292 text13 CODE >32:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+1294 text13 CODE >33:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_init.c
+136A text12 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_read.c
+136A text12 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_read.c
+136C text12 CODE >13:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_read.c
+1370 text12 CODE >15:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/adc/src/adc_read.c
+1382 text11 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1382 text11 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1384 text11 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+137E text10 CODE >14:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+137E text10 CODE >16:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1380 text10 CODE >17:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+137A text9 CODE >19:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+137A text9 CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+137C text9 CODE >22:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1374 text8 CODE >24:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1374 text8 CODE >27:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1376 text8 CODE >28:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1378 text8 CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/gpio/src/led_init.c
+1156 text7 CODE >8:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1156 text7 CODE >14:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1166 text7 CODE >15:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1172 text7 CODE >16:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1176 text7 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1178 text7 CODE >18:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1182 text7 CODE >19:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1184 text7 CODE >17:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1184 text7 CODE >20:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1188 text7 CODE >22:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+1192 text7 CODE >23:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11A6 text7 CODE >24:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11B6 text7 CODE >25:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11B8 text7 CODE >26:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11B8 text7 CODE >27:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11C2 text7 CODE >28:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11C6 text7 CODE >30:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+11D6 text7 CODE >31:/opt/microchip/xc8/v1.45/sources/common/lldiv.c
+10B4 text6 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+10B4 text6 CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+10BA text6 CODE >22:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+10BE text6 CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+10C2 text6 CODE >26:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+10C4 text6 CODE >27:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+10C6 text6 CODE >28:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1122 text6 CODE >29:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1128 text6 CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+112C text6 CODE >33:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+112E text6 CODE >34:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1130 text6 CODE >35:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1132 text6 CODE >37:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1134 text6 CODE >38:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1136 text6 CODE >39:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1138 text6 CODE >42:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+113C text6 CODE >43:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1140 text6 CODE >44:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1144 text6 CODE >45:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1146 text6 CODE >46:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1148 text6 CODE >53:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+114C text6 CODE >54:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1150 text6 CODE >55:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+1154 text6 CODE >56:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_init.c
+135E text5 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_putc.c
+1360 text5 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_putc.c
+1364 text5 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_putc.c
+1368 text5 CODE >13:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_putc.c
+12EA text4 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_puts.c
+12EA text4 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_puts.c
+12EC text4 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_puts.c
+1300 text4 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart1/src/uart1_puts.c
+100E text3 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+100E text3 CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1014 text3 CODE >22:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1018 text3 CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+101C text3 CODE >26:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1020 text3 CODE >27:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1022 text3 CODE >28:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+107E text3 CODE >29:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1086 text3 CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+108A text3 CODE >33:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+108C text3 CODE >34:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+108E text3 CODE >35:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1090 text3 CODE >37:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1092 text3 CODE >38:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1094 text3 CODE >39:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1096 text3 CODE >42:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1098 text3 CODE >43:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+109C text3 CODE >44:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+10A0 text3 CODE >45:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+10A2 text3 CODE >46:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+10A4 text3 CODE >53:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+10AA text3 CODE >54:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+10AE text3 CODE >55:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+10B2 text3 CODE >56:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_init.c
+1350 text2 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_putc.c
+1352 text2 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_putc.c
+1358 text2 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_putc.c
+135C text2 CODE >13:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_putc.c
+12C0 text1 CODE >9:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_puts.c
+12C0 text1 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_puts.c
+12C2 text1 CODE >12:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_puts.c
+12D6 text1 CODE >11:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/uart2/src/uart2_puts.c
+F44 text0 CODE >14:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F44 text0 CODE >19:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F48 text0 CODE >20:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F4C text0 CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F50 text0 CODE >22:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F54 text0 CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F58 text0 CODE >24:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F5C text0 CODE >25:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F70 text0 CODE >26:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F84 text0 CODE >27:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F88 text0 CODE >28:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F8E text0 CODE >31:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F90 text0 CODE >32:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F92 text0 CODE >33:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F94 text0 CODE >34:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+F96 text0 CODE >37:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FA2 text0 CODE >38:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FAE text0 CODE >41:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FBC text0 CODE >42:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FBE text0 CODE >43:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FC0 text0 CODE >44:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FC4 text0 CODE >45:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FC6 text0 CODE >46:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FC8 text0 CODE >47:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FCC text0 CODE >48:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FCE text0 CODE >49:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FD0 text0 CODE >50:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FD4 text0 CODE >51:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FD6 text0 CODE >52:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FD8 text0 CODE >53:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FDC text0 CODE >41:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FE2 text0 CODE >59:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FE6 text0 CODE >60:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FE8 text0 CODE >61:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FEA text0 CODE >62:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FEC text0 CODE >63:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FEE text0 CODE >65:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FF4 text0 CODE >66:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FF6 text0 CODE >67:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FF8 text0 CODE >68:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FFA text0 CODE >69:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FFC text0 CODE >71:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+FFE text0 CODE >72:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+1006 text0 CODE >73:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+100C text0 CODE >57:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/main.c
+1296 cinit CODE >10445:/tmp/xcXE2qmOA
+1296 cinit CODE >10447:/tmp/xcXE2qmOA
+1296 cinit CODE >10450:/tmp/xcXE2qmOA
+1296 cinit CODE >10468:/tmp/xcXE2qmOA
+129A cinit CODE >10469:/tmp/xcXE2qmOA
+129C cinit CODE >10470:/tmp/xcXE2qmOA
+129C cinit CODE >10471:/tmp/xcXE2qmOA
+129E cinit CODE >10472:/tmp/xcXE2qmOA
+12A0 cinit CODE >10473:/tmp/xcXE2qmOA
+12A2 cinit CODE >10476:/tmp/xcXE2qmOA
+12A6 cinit CODE >10477:/tmp/xcXE2qmOA
+12A8 cinit CODE >10478:/tmp/xcXE2qmOA
+12A8 cinit CODE >10479:/tmp/xcXE2qmOA
+12AA cinit CODE >10480:/tmp/xcXE2qmOA
+12AC cinit CODE >10481:/tmp/xcXE2qmOA
+12AE cinit CODE >10487:/tmp/xcXE2qmOA
+12AE cinit CODE >10489:/tmp/xcXE2qmOA
+12B0 cinit CODE >10490:/tmp/xcXE2qmOA
+12B2 cinit CODE >10492:/tmp/xcXE2qmOA
+12B4 cinit CODE >10493:/tmp/xcXE2qmOA
+12B6 cinit CODE >10494:/tmp/xcXE2qmOA
+12B8 cinit CODE >10495:/tmp/xcXE2qmOA
+12BA cinit CODE >10496:/tmp/xcXE2qmOA
+12BC cinit CODE >10497:/tmp/xcXE2qmOA
+$switch_init.obj
+1314 text CODE >19:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1314 text CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1318 text CODE >22:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+131A text CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+131C text CODE >24:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+131E text CODE >25:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1322 text CODE >26:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1324 text CODE >28:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1324 text CODE >30:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1328 text CODE >31:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+132A text CODE >32:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+132C text CODE >33:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+132E text CODE >34:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+1332 text CODE >35:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/gpio/src/switch_init.as
+$delay_200ms.obj
+1334 text CODE >21:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1334 text CODE >23:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1338 text CODE >24:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+133A text CODE >36:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+133C text CODE >37:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+133E text CODE >39:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+133E text CODE >40:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1340 text CODE >41:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1342 text CODE >42:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1344 text CODE >43:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1346 text CODE >44:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+1348 text CODE >45:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+134A text CODE >48:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+134E text CODE >49:/media/neku/home/hard/mcu/pic18/tp/2020-2021/etu/disco/apps/test_tools/test/delay_200ms.as
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__end_of_uart1_isr_process 1268 0 CODE 0 text16 dist/default/debug/pjct.debug.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug/pjct.debug.obj
+__Hspace_0 30000C 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hspace_1 7E 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hspace_2 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug/pjct.debug.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcX6fZsaZ.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/pjct.debug.obj
+__CFG_RSTOSC$HFINTOSC_64MHZ 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+main@i 7C 0 BANK0 1 cstackBANK0 dist/default/debug/pjct.debug.obj
+__Lsmallconst F00 0 SMALLCONST 0 smallconst dist/default/debug/pjct.debug.obj
+_LATA F83 0 ABS 0 - dist/default/debug/pjct.debug.obj
+___sp 0 0 STACK 2 stack /tmp/xcX6fZsaZ.obj
+_main F44 0 CODE 0 text0 dist/default/debug/pjct.debug.obj
+btemp 48 0 COMRAM 1 temp dist/default/debug/pjct.debug.obj
+uart1_puts@str 18 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+start CE 0 CODE 0 init /tmp/xcX6fZsaZ.obj
+__size_of_main 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of___lldiv 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/pjct.debug.obj
+uart2_puts@str 18 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__CFG_DEBUG$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_uart2_isr_process 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__end_of_uart1_init 1156 0 CODE 0 text6 dist/default/debug/pjct.debug.obj
+__end_of_uart1_putc 136A 0 CODE 0 text5 dist/default/debug/pjct.debug.obj
+__end_of_uart1_puts 1314 0 CODE 0 text4 dist/default/debug/pjct.debug.obj
+__end_of_uart2_init 10B4 0 CODE 0 text3 dist/default/debug/pjct.debug.obj
+__end_of_uart2_putc 135E 0 CODE 0 text2 dist/default/debug/pjct.debug.obj
+__end_of_uart2_puts 12EA 0 CODE 0 text1 dist/default/debug/pjct.debug.obj
+__Hpowerup CE 0 CODE 0 powerup dist/default/debug/pjct.debug.obj
+_delay_200ms 1334 0 CODE 0 text delay_200ms.obj
+uart2_isr_process@lost 1 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__accesstop 60 0 ABS 0 - /tmp/xcX6fZsaZ.obj
+intlevel0 0 0 CODE 0 text /tmp/xcX6fZsaZ.obj
+intlevel1 0 0 CODE 0 text /tmp/xcX6fZsaZ.obj
+intlevel2 0 0 CODE 0 text /tmp/xcX6fZsaZ.obj
+intlevel3 0 0 CODE 0 text /tmp/xcX6fZsaZ.obj
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/pjct.debug.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/pjct.debug.obj
+wtemp6 49 0 COMRAM 1 temp dist/default/debug/pjct.debug.obj
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR4$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR5$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR6$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTR7$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug/pjct.debug.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug/pjct.debug.obj
+uart2_putc@payload 17 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+_uart1_isr_process 1222 0 CODE 0 text16 dist/default/debug/pjct.debug.obj
+_ADCON0 F60 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADCON1 F59 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADCON2 F5A 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADCON3 F5B 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADRESH F64 0 ABS 0 - dist/default/debug/pjct.debug.obj
+uart1_isr_process@lost 1 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/xcX6fZsaZ.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/xcX6fZsaZ.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug/pjct.debug.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/pjct.debug.obj
+_TXSTA1bits F9E 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_TXSTA2bits E9E 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug/pjct.debug.obj
+__Hintcodelo CE 0 CODE 0 intcodelo dist/default/debug/pjct.debug.obj
+__CFG_FEXTOSC$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__end_of___lldiv 11D8 0 CODE 0 text7 dist/default/debug/pjct.debug.obj
+__size_of_isr_low 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_PPS1WAY$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+___lldiv@counter 23 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__Lintcodelo 18 0 CODE 0 intcodelo dist/default/debug/pjct.debug.obj
+__end_of_uart2_isr_process 1222 0 CODE 0 text15 dist/default/debug/pjct.debug.obj
+start_initialization 1296 0 CODE 0 cinit dist/default/debug/pjct.debug.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/pjct.debug.obj
+__CFG_WDTCPS$WDTCPS_12 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_TRISAbits F88 0 ABS 0 - dist/default/debug/pjct.debug.obj
+___lldiv@dividend 17 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__Hbss_delay 0 0 ABS 0 bss_delay dist/default/debug/pjct.debug.obj
+___rparam_used 1 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RC1PPS EF8 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RC1REG F99 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RC2REG E99 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RC6PPS EFD 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RX1PPS EB5 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RX2PPS E8D 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_SP1BRG F9B 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_SP2BRG E9B 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__pcstackBANK0 7B 0 BANK0 1 cstackBANK0 dist/default/debug/pjct.debug.obj
+_IPR3bits EBD 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_TX1REG F9A 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_TX2REG E9A 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_uart1_rx 31 0 COMRAM 1 bssCOMRAM dist/default/debug/pjct.debug.obj
+_uart2_rx 60 0 BANK0 1 bssBANK0 dist/default/debug/pjct.debug.obj
+__Lbss_delay 0 0 ABS 0 bss_delay dist/default/debug/pjct.debug.obj
+__size_of_uart1_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_uart1_putc 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_uart1_puts 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug/pjct.debug.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug/pjct.debug.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug/pjct.debug.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug/pjct.debug.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug/pjct.debug.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug/pjct.debug.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug/pjct.debug.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug/pjct.debug.obj
+__Hbank8 0 0 ABS 0 bank8 dist/default/debug/pjct.debug.obj
+__Hbank9 0 0 ABS 0 bank9 dist/default/debug/pjct.debug.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/debug/pjct.debug.obj
+__Hconst 0 0 CONST 0 const dist/default/debug/pjct.debug.obj
+main@conv_data 7B 0 BANK0 1 cstackBANK0 dist/default/debug/pjct.debug.obj
+__Hidata 0 0 CODE 0 idata dist/default/debug/pjct.debug.obj
+__Hidloc 200010 0 IDLOC 0 idloc dist/default/debug/pjct.debug.obj
+__size_of_uart2_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_uart2_putc 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_uart2_puts 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug/pjct.debug.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug/pjct.debug.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug/pjct.debug.obj
+__Hstack 0 0 STACK 2 stack dist/default/debug/pjct.debug.obj
+__Htext0 0 0 ABS 0 text0 dist/default/debug/pjct.debug.obj
+__Htext1 0 0 ABS 0 text1 dist/default/debug/pjct.debug.obj
+__Htext2 0 0 ABS 0 text2 dist/default/debug/pjct.debug.obj
+__Htext3 0 0 ABS 0 text3 dist/default/debug/pjct.debug.obj
+__Htext4 0 0 ABS 0 text4 dist/default/debug/pjct.debug.obj
+__Htext5 0 0 ABS 0 text5 dist/default/debug/pjct.debug.obj
+__Htext6 0 0 ABS 0 text6 dist/default/debug/pjct.debug.obj
+__Htext7 0 0 ABS 0 text7 dist/default/debug/pjct.debug.obj
+__Htext8 0 0 ABS 0 text8 dist/default/debug/pjct.debug.obj
+__Htext9 0 0 ABS 0 text9 dist/default/debug/pjct.debug.obj
+_switch1_init 1314 0 CODE 0 text switch_init.obj
+__Hbank10 0 0 ABS 0 bank10 dist/default/debug/pjct.debug.obj
+__Hbank11 0 0 ABS 0 bank11 dist/default/debug/pjct.debug.obj
+__Hbank12 0 0 ABS 0 bank12 dist/default/debug/pjct.debug.obj
+__Hbank13 0 0 ABS 0 bank13 dist/default/debug/pjct.debug.obj
+__Hbank14 0 0 ABS 0 bank14 dist/default/debug/pjct.debug.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/pjct.debug.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/debug/pjct.debug.obj
+__smallconst F00 0 SMALLCONST 0 smallconst /tmp/xcX6fZsaZ.obj
+__Hbss_sw 0 0 ABS 0 bss_sw dist/default/debug/pjct.debug.obj
+_switch2_init 1324 0 CODE 0 text switch_init.obj
+__Hcomram 0 0 ABS 0 comram dist/default/debug/pjct.debug.obj
+__Hconfig 30000C 0 CONFIG 0 config dist/default/debug/pjct.debug.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug/pjct.debug.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug/pjct.debug.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug/pjct.debug.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug/pjct.debug.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug/pjct.debug.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug/pjct.debug.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug/pjct.debug.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug/pjct.debug.obj
+__Lbank8 0 0 ABS 0 bank8 dist/default/debug/pjct.debug.obj
+__Lbank9 0 0 ABS 0 bank9 dist/default/debug/pjct.debug.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/debug/pjct.debug.obj
+__Lconst 0 0 CONST 0 const dist/default/debug/pjct.debug.obj
+__Lidata 0 0 CODE 0 idata dist/default/debug/pjct.debug.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/debug/pjct.debug.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug/pjct.debug.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug/pjct.debug.obj
+__end_of_isr_low CE 0 CODE 0 intcodelo dist/default/debug/pjct.debug.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug/pjct.debug.obj
+__Lstack 0 0 STACK 2 stack dist/default/debug/pjct.debug.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/debug/pjct.debug.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/debug/pjct.debug.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/debug/pjct.debug.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/debug/pjct.debug.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/debug/pjct.debug.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/debug/pjct.debug.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/debug/pjct.debug.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/debug/pjct.debug.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/debug/pjct.debug.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/debug/pjct.debug.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug/pjct.debug.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug/pjct.debug.obj
+_PORTBbits F8E 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_PORTCbits F8F 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_INTCONbits FF2 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/debug/pjct.debug.obj
+__Hdata 0 0 ABS 0 data dist/default/debug/pjct.debug.obj
+__Hinit D2 0 CODE 0 init dist/default/debug/pjct.debug.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug/pjct.debug.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug/pjct.debug.obj
+__Htemp 49 0 COMRAM 1 temp dist/default/debug/pjct.debug.obj
+__Htext 0 0 ABS 0 text dist/default/debug/pjct.debug.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/debug/pjct.debug.obj
+__Ldata 0 0 ABS 0 data dist/default/debug/pjct.debug.obj
+__Linit CE 0 CODE 0 init dist/default/debug/pjct.debug.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug/pjct.debug.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug/pjct.debug.obj
+__Ltemp 48 0 COMRAM 1 temp dist/default/debug/pjct.debug.obj
+__Ltext 0 0 ABS 0 text dist/default/debug/pjct.debug.obj
+__CFG_XINST$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WDTCWS$WDTCWS_7 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_SCANE$ON 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug/pjct.debug.obj
+int$flags 48 0 COMRAM 1 temp dist/default/debug/pjct.debug.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__Hintret 0 0 ABS 0 intret dist/default/debug/pjct.debug.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/debug/pjct.debug.obj
+__S0 30000C 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__S1 7E 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__S2 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_uart2_isr_process 11D8 0 CODE 0 text15 dist/default/debug/pjct.debug.obj
+uart1_init@flush 2C 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__CFG_WDTE$SWDTEN 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/pjct.debug.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug/pjct.debug.obj
+uart2_init@bdrate_calcul 2D 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/debug/pjct.debug.obj
+___lldiv@divisor 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+uart1_init@bdrate 24 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__end_of_led2_init 1386 0 CODE 0 text11 dist/default/debug/pjct.debug.obj
+__Hramtop F00 0 RAM 0 ramtop dist/default/debug/pjct.debug.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug/pjct.debug.obj
+__end_of_led3_init 1382 0 CODE 0 text10 dist/default/debug/pjct.debug.obj
+__size_of_led2_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_adc_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_adc_read 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__activetblptr 1 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__end_of_led4_init 137E 0 CODE 0 text9 dist/default/debug/pjct.debug.obj
+__size_of_led3_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug/pjct.debug.obj
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug/pjct.debug.obj
+__Htext10 0 0 ABS 0 text10 dist/default/debug/pjct.debug.obj
+__Htext11 0 0 ABS 0 text11 dist/default/debug/pjct.debug.obj
+__Htext12 0 0 ABS 0 text12 dist/default/debug/pjct.debug.obj
+__Htext13 0 0 ABS 0 text13 dist/default/debug/pjct.debug.obj
+__Htext15 0 0 ABS 0 text15 dist/default/debug/pjct.debug.obj
+__Htext16 0 0 ABS 0 text16 dist/default/debug/pjct.debug.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__end_of_led5_init 137A 0 CODE 0 text8 dist/default/debug/pjct.debug.obj
+__size_of_led4_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__size_of_led5_init 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_PIE3bits EC5 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__ptext10 137E 0 CODE 0 text10 dist/default/debug/pjct.debug.obj
+__ptext11 1382 0 CODE 0 text11 dist/default/debug/pjct.debug.obj
+__ptext12 136A 0 CODE 0 text12 dist/default/debug/pjct.debug.obj
+__ptext13 1268 0 CODE 0 text13 dist/default/debug/pjct.debug.obj
+__ptext15 11D8 0 CODE 0 text15 dist/default/debug/pjct.debug.obj
+__ptext16 1222 0 CODE 0 text16 dist/default/debug/pjct.debug.obj
+_led2_init 1382 0 CODE 0 text11 dist/default/debug/pjct.debug.obj
+___lldiv 1156 0 CODE 0 text7 dist/default/debug/pjct.debug.obj
+__Lbank10 0 0 ABS 0 bank10 dist/default/debug/pjct.debug.obj
+__Lbank11 0 0 ABS 0 bank11 dist/default/debug/pjct.debug.obj
+__Lbank12 0 0 ABS 0 bank12 dist/default/debug/pjct.debug.obj
+__Lbank13 0 0 ABS 0 bank13 dist/default/debug/pjct.debug.obj
+__Lbank14 0 0 ABS 0 bank14 dist/default/debug/pjct.debug.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/pjct.debug.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/debug/pjct.debug.obj
+_led3_init 137E 0 CODE 0 text10 dist/default/debug/pjct.debug.obj
+__Lbss_sw 0 0 ABS 0 bss_sw dist/default/debug/pjct.debug.obj
+__Lcomram 0 0 ABS 0 comram dist/default/debug/pjct.debug.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/debug/pjct.debug.obj
+_led4_init 137A 0 CODE 0 text9 dist/default/debug/pjct.debug.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_LATAbits F83 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_led5_init 1374 0 CODE 0 text8 dist/default/debug/pjct.debug.obj
+_RCSTA1bits F9D 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_RCSTA2bits E9D 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug/pjct.debug.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug/pjct.debug.obj
+stackhi E87 0 ABS 0 - /tmp/xcX6fZsaZ.obj
+stacklo 7E 0 ABS 0 - /tmp/xcX6fZsaZ.obj
+__Lintcode 4 0 CODE 0 intcode dist/default/debug/pjct.debug.obj
+__Lintret 0 0 ABS 0 intret dist/default/debug/pjct.debug.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/debug/pjct.debug.obj
+_ADCON0bits F60 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_adc_init 1268 0 CODE 0 text13 dist/default/debug/pjct.debug.obj
+_adc_read 136A 0 CODE 0 text12 dist/default/debug/pjct.debug.obj
+uart2_init@flush 2C 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__Lspace_0 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Lspace_1 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Lspace_2 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__pbssCOMRAM 31 0 COMRAM 1 bssCOMRAM dist/default/debug/pjct.debug.obj
+__CFG_LPBOREN$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug/pjct.debug.obj
+_PIR3bits ECD 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WDTCCS$HFINTOSC 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_CSWEN$ON 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__end_of_adc_init 1296 0 CODE 0 text13 dist/default/debug/pjct.debug.obj
+__end_of_adc_read 1374 0 CODE 0 text12 dist/default/debug/pjct.debug.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__CFG_ZCD$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+end_of_initialization 12AE 0 CODE 0 cinit dist/default/debug/pjct.debug.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug/pjct.debug.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/debug/pjct.debug.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+?___lldiv 17 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+uart1_init@bdrate_calcul 2D 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug/pjct.debug.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug/pjct.debug.obj
+__Lramtop F00 0 RAM 0 ramtop dist/default/debug/pjct.debug.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug/pjct.debug.obj
+__pcinit 1296 0 CODE 0 cinit dist/default/debug/pjct.debug.obj
+__size_of_uart1_isr_process 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__ptext0 F44 0 CODE 0 text0 dist/default/debug/pjct.debug.obj
+__ptext1 12C0 0 CODE 0 text1 dist/default/debug/pjct.debug.obj
+__ptext2 1350 0 CODE 0 text2 dist/default/debug/pjct.debug.obj
+__ptext3 100E 0 CODE 0 text3 dist/default/debug/pjct.debug.obj
+__ptext4 12EA 0 CODE 0 text4 dist/default/debug/pjct.debug.obj
+__ptext5 135E 0 CODE 0 text5 dist/default/debug/pjct.debug.obj
+__ptext6 10B4 0 CODE 0 text6 dist/default/debug/pjct.debug.obj
+__ptext7 1156 0 CODE 0 text7 dist/default/debug/pjct.debug.obj
+__ptext8 1374 0 CODE 0 text8 dist/default/debug/pjct.debug.obj
+__ptext9 137A 0 CODE 0 text9 dist/default/debug/pjct.debug.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug/pjct.debug.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/debug/pjct.debug.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/debug/pjct.debug.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/debug/pjct.debug.obj
+__Ltext13 0 0 ABS 0 text13 dist/default/debug/pjct.debug.obj
+__Ltext15 0 0 ABS 0 text15 dist/default/debug/pjct.debug.obj
+__Ltext16 0 0 ABS 0 text16 dist/default/debug/pjct.debug.obj
+__ramtop F00 0 RAM 0 ramtop /tmp/xcX6fZsaZ.obj
+__Lpowerup CE 0 CODE 0 powerup dist/default/debug/pjct.debug.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/pjct.debug.obj
+_isr_low 18 0 CODE 0 intcodelo dist/default/debug/pjct.debug.obj
+__psmallconst F00 0 SMALLCONST 0 smallconst dist/default/debug/pjct.debug.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug/pjct.debug.obj
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+___param_bank 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/pjct.debug.obj
+__end_of__initialization 12AE 0 CODE 0 cinit dist/default/debug/pjct.debug.obj
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT2$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT3$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT4$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT5$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT6$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRT7$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug/pjct.debug.obj
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_SP1BRGH F9C 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_SP2BRGH E9C 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug/pjct.debug.obj
+uart2_init@bdrate 24 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__CFG_BORV$VBOR_2P45 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__pintcodelo 18 0 CODE 0 intcodelo dist/default/debug/pjct.debug.obj
+___lldiv@quotient 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__CFG_BOREN$SBORDIS 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__end_of_main 100E 0 CODE 0 text0 dist/default/debug/pjct.debug.obj
+_ADACQ F5C 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADCAP F5D 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADPCH F5F 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADPRE F5E 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ADREF F58 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_TRISA F88 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__HRAM 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hbss 0 0 RAM 1 bss dist/default/debug/pjct.debug.obj
+__Hram 0 0 ABS 0 ram dist/default/debug/pjct.debug.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/debug/pjct.debug.obj
+__LRAM 1 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Lbss 0 0 RAM 1 bss dist/default/debug/pjct.debug.obj
+__Lram 0 0 ABS 0 ram dist/default/debug/pjct.debug.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/debug/pjct.debug.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+uart1_putc@payload 17 0 COMRAM 1 cstackCOMRAM dist/default/debug/pjct.debug.obj
+__initialization 1296 0 CODE 0 cinit dist/default/debug/pjct.debug.obj
+_uart1_init 10B4 0 CODE 0 text6 dist/default/debug/pjct.debug.obj
+_uart1_putc 135E 0 CODE 0 text5 dist/default/debug/pjct.debug.obj
+_uart1_puts 12EA 0 CODE 0 text4 dist/default/debug/pjct.debug.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_BAUDCON1bits F9F 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_BAUDCON2bits E9F 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/debug/pjct.debug.obj
+_uart2_init 100E 0 CODE 0 text3 dist/default/debug/pjct.debug.obj
+_uart2_putc 1350 0 CODE 0 text2 dist/default/debug/pjct.debug.obj
+_uart2_puts 12C0 0 CODE 0 text1 dist/default/debug/pjct.debug.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug/pjct.debug.obj
+__Hsmallconst F44 0 SMALLCONST 0 smallconst dist/default/debug/pjct.debug.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug/pjct.debug.obj
+_ANSELAbits F11 0 ABS 0 - dist/default/debug/pjct.debug.obj
+_ANSELCbits F21 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/pjct.debug.obj
+__CFG_MCLRE$EXTMCLR 0 0 ABS 0 - dist/default/debug/pjct.debug.obj
+__Hintcode 4 0 CODE 0 intcode dist/default/debug/pjct.debug.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+intcodelo 0 18 18 BA 1
+idloc 0 200000 200000 10 1
+text0 0 F44 F44 442 1
+cstackCOMRAM 1 1 1 48 1
+reset_vec 0 0 0 4 1
+bssBANK0 1 60 60 1E 1
+smallconst 0 F00 F00 44 1
+config 0 300000 300000 C 1

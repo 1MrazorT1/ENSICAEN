@@ -1,0 +1,47 @@
+
+
+Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
+                                                                                                           Fri Apr 19 14:49:31 2024
+
+
+     1                           	processor	18F27K40
+     2                           	opt	pw 132
+     3                           	psect	bss_delay,global,class=BANK0,space=1,delta=1
+     4                           	psect	text,global,reloc=2,class=CODE,delta=1
+     5                           
+     6                           ; file common/delay/src/delay_10us.h
+     7                           ; brief 10us software delay
+     8                           ; warning 10us duration only for 64MHz cpu clock
+     9                           ; author
+    10  0000                     
+    11                           ; linker memory static allocation directives for data
+    12                           
+    13                           	psect	bss_delay
+    14  00006B                     delay_cnt1:
+    15  00006B                     	ds	1	; 1 byte static memory allocation
+    16  00006C                     bsr_tmp:
+    17  00006C                     	ds	1
+    18                           
+    19                           ; linker memory static allocation directives for code
+    20                           
+    21                           	psect	text
+    22  01FF7E                     _delay_10us:
+    23                           	opt stack 0
+    24  01FF7E  CFE0 FFE8          	movff	bsr,wreg
+    25  01FF82  0100               	movlb	0
+    26  01FF84  CFE8 F06C          	movff	wreg,bsr_tmp
+    27  01FF88  0E33               	movlw	51
+    28  01FF8A  6F6B               	movwf	delay_cnt1,b
+    29  01FF8C                     delay_10us_L1:
+    30  01FF8C  2F6B               	decfsz	delay_cnt1,f,b
+    31  01FF8E  D7FE               	goto	delay_10us_L1
+    32  01FF90  C06C  FFE0         	movff	bsr_tmp,bsr
+    33                           wreg	equ	0xFE8
+    34                           bsr	equ	0xFE0
+
+
+Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
+Symbol Table                                                                                               Fri Apr 19 14:49:31 2024
+
+                            BSR 000FE0                             WREG 000FE8                          bsr_tmp 006C  
+                    _delay_10us FF7E                    delay_10us_L1 FF8C                       delay_cnt1 006B  

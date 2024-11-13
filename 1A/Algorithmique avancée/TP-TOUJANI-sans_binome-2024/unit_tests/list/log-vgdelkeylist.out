@@ -1,0 +1,80 @@
+==590851== Memcheck, a memory error detector
+==590851== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==590851== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==590851== Command: ./vgdelkeylist
+==590851== Parent PID: 590841
+==590851== 
+==590851== 
+==590851== HEAP SUMMARY:
+==590851==     in use at exit: 183 bytes in 12 blocks
+==590851==   total heap usage: 13 allocs, 1 frees, 239 bytes allocated
+==590851== 
+==590851== 3 bytes in 1 blocks are indirectly lost in loss record 1 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109267: buildExampleList (vgdelkeylist.c:18)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 3 bytes in 1 blocks are indirectly lost in loss record 2 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109337: buildExampleList (vgdelkeylist.c:25)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 3 bytes in 1 blocks are indirectly lost in loss record 3 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109407: buildExampleList (vgdelkeylist.c:32)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 3 bytes in 1 blocks are indirectly lost in loss record 4 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x1094D7: buildExampleList (vgdelkeylist.c:40)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 3 bytes in 1 blocks are indirectly lost in loss record 5 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x10963C: buildExampleList (vgdelkeylist.c:53)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 24 bytes in 1 blocks are indirectly lost in loss record 6 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x1091C3: buildExampleList (vgdelkeylist.c:11)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 24 bytes in 1 blocks are indirectly lost in loss record 7 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109243: buildExampleList (vgdelkeylist.c:17)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 24 bytes in 1 blocks are indirectly lost in loss record 8 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109313: buildExampleList (vgdelkeylist.c:24)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 24 bytes in 1 blocks are indirectly lost in loss record 9 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x1093E3: buildExampleList (vgdelkeylist.c:31)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 24 bytes in 1 blocks are indirectly lost in loss record 10 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x1094B3: buildExampleList (vgdelkeylist.c:39)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 24 bytes in 1 blocks are indirectly lost in loss record 11 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109581: buildExampleList (vgdelkeylist.c:46)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== 183 (24 direct, 159 indirect) bytes in 1 blocks are definitely lost in loss record 12 of 12
+==590851==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==590851==    by 0x109618: buildExampleList (vgdelkeylist.c:52)
+==590851==    by 0x1096FA: main (vgdelkeylist.c:64)
+==590851== 
+==590851== LEAK SUMMARY:
+==590851==    definitely lost: 24 bytes in 1 blocks
+==590851==    indirectly lost: 159 bytes in 11 blocks
+==590851==      possibly lost: 0 bytes in 0 blocks
+==590851==    still reachable: 0 bytes in 0 blocks
+==590851==         suppressed: 0 bytes in 0 blocks
+==590851== 
+==590851== For lists of detected and suppressed errors, rerun with: -s
+==590851== ERROR SUMMARY: 12 errors from 12 contexts (suppressed: 0 from 0)

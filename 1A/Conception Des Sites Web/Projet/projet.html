@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projet Conception Site Web - 1A Info</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<link rel="stylesheet" href="tools/normalize.css"/>
+	<style type="text/css">
+     * { text-align: center; }
+     #canvanim { width: 512px; height: 256px; border-width: 2px; border-style: solid; margin-left: auto; margin-right: auto;}
+     #stop_clic:hover { font-variant: small-caps; cursor: pointer; }
+   </style>
+   <script type="text/javascript" src="tools/sprites.js"></script>
+</head>
+<body>
+   <div class="canva">
+		<canvas id="canvanim" width="512" height="256"> 
+			Ne supporte pas canvas.
+		</canvas>
+	</div>
+	<div id="stop_clic" onclick="Start_StopAnim()">Start/Stop</div>
+</body>
+<script type="text/javascript">
+	function Start_StopAnim() {
+    var courir = [0,1,2,3,4,5,6,7];
+    var canva = document.getElementById("canvanim").getContext("2d");
+    var chat = new CanvasSprite("./images/chat.png", 0, 0, 512, 256, 2, 4, canva);
+    chat.addAnimation("courir", courir);
+    chat.selectAnimation("courir", false);
+    if(chat.loop) {
+        console.log(document);
+        chat.loop = false;
+        chat.stopAnim();
+    } else {
+        console.log(chat.image.ctx);
+        chat.loop = true;
+        chat.simpleAnim(300);
+    }
+}
+</script>
+</html>

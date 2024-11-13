@@ -1,0 +1,64 @@
+
+
+Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
+                                                                                                           Fri Apr 19 15:09:41 2024
+
+
+     1                           	processor	18F27K40
+     2                           	opt	pw 132
+     3                           	psect	bss_delay,global,class=BANK0,space=1,delta=1
+     4                           	psect	text,global,reloc=2,class=CODE,delta=1
+     5                           
+     6                           ; file common/delay/src/delay_40ms.h
+     7                           ; brief 40ms software delay
+     8                           ; warning 40ms duration only for 64MHz cpu clock
+     9                           ; author
+    10  0000                     
+    11                           ; linker memory static allocation directives for data
+    12                           
+    13                           	psect	bss_delay
+    14  000060                     delay_cnt1:
+    15  000060                     	ds	1
+    16  000061                     delay_cnt2:
+    17  000061                     	ds	1
+    18  000062                     delay_cnt3:
+    19  000062                     	ds	1
+    20  000063                     bsr_tmp:
+    21  000063                     	ds	1
+    22                           
+    23                           ; linker memory static allocation directives for code
+    24                           
+    25                           	psect	text
+    26  01FFD8                     _delay_40ms:
+    27                           	opt stack 0
+    28  01FFD8  CFE0 FFE8          	movff	bsr,wreg
+    29  01FFDC  0100               	movlb	0
+    30  01FFDE  CFE8 F063          	movff	wreg,bsr_tmp
+    31  01FFE2  0E28               	movlw	40
+    32  01FFE4  6F62               	movwf	delay_cnt3,b
+    33  01FFE6                     delay_40ms_L1:
+    34  01FFE6  0E64               	movlw	100
+    35  01FFE8  6F61               	movwf	delay_cnt2,b
+    36  01FFEA                     delay_40ms_L2:
+    37  01FFEA  0E35               	movlw	53
+    38  01FFEC  6F60               	movwf	delay_cnt1,b
+    39  01FFEE                     delay_40ms_L3:
+    40  01FFEE  2F60               	decfsz	delay_cnt1,f,b
+    41  01FFF0  D7FE               	goto	delay_40ms_L3
+    42  01FFF2  2F61               	decfsz	delay_cnt2,f,b
+    43  01FFF4  D7FA               	goto	delay_40ms_L2
+    44  01FFF6  2F62               	decfsz	delay_cnt3,f,b
+    45  01FFF8  D7F6               	goto	delay_40ms_L1
+    46  01FFFA  C063  FFE0         	movff	bsr_tmp,bsr
+    47  01FFFE  0012               	return	
+    48                           wreg	equ	0xFE8
+    49                           bsr	equ	0xFE0
+
+
+Microchip Technology PIC18 Macro Assembler V1.45 build -152302408 
+Symbol Table                                                                                               Fri Apr 19 15:09:41 2024
+
+                            BSR 000FE0                             WREG 000FE8                          bsr_tmp 0063  
+                    _delay_40ms FFD8                    delay_40ms_L1 FFE6                    delay_40ms_L2 FFEA  
+                  delay_40ms_L3 FFEE                       delay_cnt1 0060                       delay_cnt2 0061  
+                     delay_cnt3 0062  

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>TOUJANI Mohamed</title>
+        <meta name="author" content="TOUJANI Mohamed">
+        <meta name="description" content="Curriculum Vitae de TOUJANI Mohamed. Élève en Informatique de l'ENSICAEN.">
+        <meta name="keywords" content="Informatique ENSICAEN, Mohamed, TOUJANI">
+        <style>
+            body {
+                background-image: url(images_tp/fondC.gif);
+                background-size: cover;
+                color: black;
+                font-family: Arial, sans-serif;
+            }
+            h1, h3 {
+                text-align: center;
+            }
+            form {
+                width: 300px;
+                margin: 20px auto;
+                padding: 20px;
+                border: 1px solid black;
+                background-color: #cce0ff;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+            fieldset {
+                border: 1px solid #8ba8d3;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+            legend {
+                background-color: #b3c7e6;
+                padding: 5px 10px;
+                font-weight: bold;
+            }
+            label {
+                display: inline-block;
+                margin-top: 10px;
+                width: 100px;
+            }
+            input[type="text"], input[type="email"], input[type="password"], select {
+                width: calc(100% - 110px);
+                padding: 5px;
+            }
+            .inline {
+                display: inline;
+            }
+            .interests {
+                display: flex;
+                justify-content: space-around;
+                padding-top: 10px;
+            }
+            .button-container {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+            input[type="submit"], input[type="reset"] {
+                padding: 5px 15px;
+                background-color: #b3c7e6;
+                border: none;
+                cursor: pointer;
+            }
+            textarea {
+                width: 100%;
+                height: 60px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TOUJANI Mohamed</h1>
+        <h3>Élève en 2ème année Informatique à l'ENSICAEN</h3>
+
+        <section>
+            <h2>Formulaire de Contact</h2>
+            <form action="mailto:mohamed.toujani@ecole.ensicaen.fr?subject=TP 1 de HTML" method="post" enctype="text/plain">
+                <fieldset>
+                    <legend>Coordonnées</legend>
+                    <label>Civilité:</label>
+                    <input type="radio" id="M" name="civilite" value="M" class="inline">
+                    <label for="M" class="inline">M.</label>
+                    <input type="radio" id="Mme" name="civilite" value="Mme" class="inline">
+                    <label for="Mme" class="inline">Mme</label>
+                    <input type="radio" id="Mlle" name="civilite" value="Mlle" class="inline">
+                    <label for="Mlle" class="inline">Mlle</label><br>
+
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" required><br>
+
+                    <label for="adresse">Adresse:</label>
+                    <input type="text" id="adresse" name="adresse" required><br>
+
+                    <label for="codepostal">Code Postal:</label>
+                    <input type="text" id="codepostal" name="codepostal" required><br>
+
+                    <label for="age">Âge:</label>
+                    <input type="password" id="age" name="age" required placeholder="ans"><br>
+
+                    <label for="ville">Ville:</label>
+                    <input type="text" id="ville" name="ville" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+
+                    <label for="pays">Pays:</label>
+                    <select id="pays" name="pays">
+                        <option value="France">France</option>
+                        <option value="Belgique">Belgique</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Centres d'intérêts</legend>
+                    <div class="interests">
+                        <label><input type="checkbox" name="interet" value="Sport"> Sport</label>
+                        <label><input type="checkbox" name="interet" value="Internet"> Internet</label>
+                        <label><input type="checkbox" name="interet" value="Cinéma"> Cinéma</label>
+                        <label><input type="checkbox" name="interet" value="Voyages"> Voyages</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message</legend>
+                    <textarea name="message" placeholder="Votre message ici..."></textarea>
+                </fieldset>
+
+                <div class="button-container">
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Recommencer">
+                </div>
+            </form>
+        </section>
+    </body>
+</html>

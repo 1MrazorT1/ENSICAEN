@@ -1,0 +1,15 @@
+Licence Creative Commons : CC BY-NC-SA
+
+ENSICAEN
+6 Bd Marechal Juin
+CS 45053
+14050 Caen cedex 04
+FRANCE
+contact@ensicaen.fr
+
+Dimitri Boudier
+neku or hugo descoubes
+Embedded Systems Team 
++33 (0)2 31 45 27 61
+dimitri.boudier@ensicaen.fr
+hugo.descoubes@ensicaen.fr

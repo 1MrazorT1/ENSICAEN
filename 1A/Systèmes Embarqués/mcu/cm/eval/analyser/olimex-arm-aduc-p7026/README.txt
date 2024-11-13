@@ -1,0 +1,1 @@
+https://www.olimex.com/Products/ARM/AnalogDevices/ADuC-P7026/

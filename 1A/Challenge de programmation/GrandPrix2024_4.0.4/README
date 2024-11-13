@@ -1,0 +1,30 @@
+_________                    _________   ________       _____
+__  ____/____________ _____________  /   ___  __ \_________(_)___  __
+_  / __ __  ___/  __ `/_  __ \  __  /    __  /_/ /_  ___/_  /__  |/_/
+/ /_/ / _  /   / /_/ /_  / / / /_/ /     _  ____/_  /   _  / __>  <
+\____/  /_/    \__,_/ /_/ /_/\__,_/      /_/     /_/    /_/  /_/|_|
+
+
+                  ---> Gestionnaire de course <---
+
+# Compilation / Lancement
+#########################
+
+Compiler d'abord le gestionnaire de course :
+
+  qmake
+  make
+
+Ensuite, compiler le pilote "Droit au but"
+
+  make -C ./test_pilot install
+
+Enfin, lancer
+
+  ./GrandPrix
+
+# Auteurs
+#########
+
+    Julien Gosme
+    Modifications par Gilles Lebrun et Sébastien Fourey

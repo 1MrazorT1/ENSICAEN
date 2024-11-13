@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/car1.png</file>
+        <file>res/car2.png</file>
+        <file>res/car3.png</file>
+        <file>res/normal.png</file>
+        <file>res/sand.png</file>
+        <file>res/out.png</file>
+        <file>res/goal.png</file>
+        <file>res/oil.png</file>
+        <file>res/current.png</file>
+        <file>res/available1.png</file>
+        <file>res/available2.png</file>
+        <file>res/available3.png</file>
+        <file>res/grand_prix.png</file>
+    </qresource>
+</RCC>

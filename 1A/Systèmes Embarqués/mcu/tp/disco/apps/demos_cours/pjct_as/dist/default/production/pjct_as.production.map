@@ -1,0 +1,63 @@
+MPLINK 5.09, LINKER
+Linker Map File - Created Thu Feb 11 18:33:33 2021
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000004
+                   .cinit    romdata   0x000004    program   0x00000e
+             .idata_acs_i    romdata   0x000012    program   0x000001
+                   .org_1       code   0x000100    program   0x00004a
+.config_300000_BUILD/DEFAULT/PRODUCTION/_EXT/14    romdata   0x300000    program   0x000001
+.config_300002_BUILD/DEFAULT/PRODUCTION/_EXT/14    romdata   0x300002    program   0x000001
+.config_300003_BUILD/DEFAULT/PRODUCTION/_EXT/14    romdata   0x300003    program   0x000001
+               .idata_acs      idata   0x000000       data   0x000001
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000012      
+                            0x000100    0x000149      
+                            0x300000    0x300000      
+                            0x300002    0x300003      
+            96 out of 132126 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     main   0x000100    program     static ../main.asm              
+                  main_c1   0x00011e    program     static ../main.asm              
+                  main_c2   0x000124    program     static ../main.asm              
+                  main_c3   0x00012a    program     static ../main.asm              
+                  main_e1   0x00012e    program     static ../main.asm              
+                  main_l1   0x00010c    program     static ../main.asm              
+                  main_l2   0x000138    program     static ../main.asm              
+                  reset_v   0x000000    program     static ../main.asm              
+        task_clear_led_D2   0x000146    program     static ../main.asm              
+          task_set_led_D2   0x000140    program     static ../main.asm              
+       task_toggle_led_D2   0x00013c    program     static ../main.asm              
+                    state   0x000000       data     static ../main.asm              
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  reset_v   0x000000    program     static ../main.asm              
+                     main   0x000100    program     static ../main.asm              
+                  main_l1   0x00010c    program     static ../main.asm              
+                  main_c1   0x00011e    program     static ../main.asm              
+                  main_c2   0x000124    program     static ../main.asm              
+                  main_c3   0x00012a    program     static ../main.asm              
+                  main_e1   0x00012e    program     static ../main.asm              
+                  main_l2   0x000138    program     static ../main.asm              
+       task_toggle_led_D2   0x00013c    program     static ../main.asm              
+          task_set_led_D2   0x000140    program     static ../main.asm              
+        task_clear_led_D2   0x000146    program     static ../main.asm              
+                    state   0x000000       data     static ../main.asm              
+
+

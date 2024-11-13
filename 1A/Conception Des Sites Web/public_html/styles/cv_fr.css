@@ -1,0 +1,11 @@
+img{
+    width:100px;
+    height:100px;
+}
+.content{
+    display : inline-block; 
+}
+
+.pic{
+    display: inline-block;
+}

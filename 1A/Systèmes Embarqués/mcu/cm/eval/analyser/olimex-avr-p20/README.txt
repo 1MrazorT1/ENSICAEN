@@ -1,0 +1,1 @@
+https://www.olimex.com/Products/AVR/Proto/AVR-P20-10MHz/
