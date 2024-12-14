@@ -253,19 +253,28 @@ class IDS( Agent ):
 
         # *** YOUR CODE HERE ***
         for depth in range(self.MAX_PATH_LENGTH + 1):
-            result = self.depth_limited_search(initial_state, depth)
+            result = self.depth_limited_search(initial_state, depth, set())
             if result is not None:
                 return result
         return None
-    def depth_limited_search(self, state, limit):
+    
+
+    def depth_limited_search(self, state, limit, visited):
         if state.is_goal_state():
-            return [state]
+            return []
+
         if limit == 0:
             return None
-        for next_state in state.get_successor_states():
-            result = self.depth_limited_search(next_state, limit - 1)
-            if result is not None:
-                return [state] + result
+
+        visited.add(state)
+
+        for next_state, direction, cost in state.get_successor_states():
+            if next_state not in visited:
+                result = self.depth_limited_search(next_state, limit - 1, visited)
+                if result is not None:
+                    return [direction] + result
+
+        visited.remove(state)
         return None
 
  #  ______                               _                  _____ 
@@ -289,5 +298,31 @@ class IDASS( Agent ):
         """
 
         # *** YOUR CODE HERE ***
+        threshold = initial_state.heuristic()
+        while threshold < float('inf'):
+            result, new_threshold = self.depth_limited_search(initial_state, 0, threshold, set())
+            if result is not None:
+                return result
+            if new_threshold == float('inf'):
+                return None
+            threshold = new_threshold
+        return None
 
+    def depth_limited_search(self, state, g, threshold, visited):
+        f = g + state.heuristic()
+        if f > threshold:
+            return None, f
+        if state.is_goal_state():
+            return [], None
+        visited.add(state)
+        next_threshold = float('inf')
+        for next_state, direction, cost in state.get_successor_states():
+            if next_state not in visited:
+                result, new_threshold = self.depth_limited_search(next_state, g + cost, threshold, visited)
+                if result is not None:
+                    return [direction] + result, None
+                if new_threshold is not None:
+                    next_threshold = min(next_threshold, new_threshold)
+        visited.remove(state)
+        return None, next_threshold
 
