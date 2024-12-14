@@ -79,20 +79,6 @@ class BFS( Agent ):
         """
 
         # *** YOUR CODE HERE ***
-        open_list = [[ (initial_state, None) ]]
-        closed_list = set([initial_state])
-        while open_list:
-            current_path = open_list.pop(0)
-            current_state, current_direction = current_path[-1]
-            if current_state.is_goal_state():
-                return(list(map(lambda x : x[1], current_path[1:])))
-            else:
-                next_steps = current_state.get_successor_states()
-                for state, direction, weight in next_steps:
-                    if state not in closed_list:
-                        closed_list.add(state)
-                        open_list.append((current_path + [(state, direction)]))
-        return[]
         # Base your work in the above DFS implementation
 
  #  ______                               _                  ___  
