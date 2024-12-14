@@ -206,6 +206,29 @@ class ASS( Agent ):
         """
         
         # *** YOUR CODE HERE ***
+        from utils import PriorityQueue
+        open_list = PriorityQueue()
+        open_list.push([(initial_state, None)], initial_state.heuristic()) # a state is a pair (boad, direction)
+        closed_list = set([initial_state]) # keep already explored positions
+
+        while not open_list.isEmpty():
+            # Get the path at the top of the queue
+            current_path, cost = open_list.pop()
+            # Get the last place of that path
+            current_state, current_direction = current_path[-1]
+            # Check if we have reached the goal
+            if current_state.is_goal_state():
+                return (list (map(lambda x : x[1], current_path[1:])))
+            else:
+                # Check were we can go from here
+                next_steps = current_state.get_successor_states()
+                # Add the new paths (one step longer) to the queue
+                for state, direction, weight in next_steps:
+                    # Avoid loop!
+                    if state not in closed_list:
+                        closed_list.add(state)
+                        open_list.push((current_path + [ (state, direction) ]), state.heuristic() + cost + weight)
+        return []
 
  #  ______                               _                  _  _   
  # |  ____|                             (_)                | || |  
@@ -229,6 +252,21 @@ class IDS( Agent ):
         """
 
         # *** YOUR CODE HERE ***
+        for depth in range(self.MAX_PATH_LENGTH + 1):
+            result = self.depth_limited_search(initial_state, depth)
+            if result is not None:
+                return result
+        return None
+    def depth_limited_search(self, state, limit):
+        if state.is_goal_state():
+            return [state]
+        if limit == 0:
+            return None
+        for next_state in state.get_successor_states():
+            result = self.depth_limited_search(next_state, limit - 1)
+            if result is not None:
+                return [state] + result
+        return None
 
  #  ______                               _                  _____ 
  # |  ____|                             (_)                | ____|
