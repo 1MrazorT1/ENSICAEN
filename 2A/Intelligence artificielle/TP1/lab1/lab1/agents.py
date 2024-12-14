@@ -80,6 +80,29 @@ class BFS( Agent ):
 
         # *** YOUR CODE HERE ***
         # Base your work in the above DFS implementation
+        open_list = [[ (initial_state, None) ]] # A state is a pair (board, direction)
+        closed_list = set([initial_state]) # keep already explored positions
+
+        while open_list:
+            # Get the path at the top of the stack (pop() returns the last item of the list)
+            current_path = open_list.pop(0)
+            # Get the last place of that path
+            current_state, current_direction = current_path[-1]
+            # Check if we have reached the goal
+            if current_state.is_goal_state():
+                # remove the start point and return only the directions.
+                return (list (map(lambda x : x[1], current_path[1:])))
+            else:
+                # Check where we can go from here
+                next_steps = current_state.get_successor_states()
+                # Add the new paths (one step longer) to the stack
+                for state, direction, weight in next_steps:
+                    # do not add already explored states
+                    if state not in closed_list:
+                        # add at the end of the list
+                        closed_list.add(state)
+                        open_list.append( (current_path + [ (state, direction) ]) )
+        return []
 
  #  ______                               _                  ___  
  # |  ____|                             (_)                |__ \ 
